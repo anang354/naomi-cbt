@@ -1,7 +1,7 @@
 
 <aside id="logo-sidebar" class="fixed top-0 left-0 z-40 h-screen transition-transform -translate-x-full bg-blue-800 ps-4 sm:bg-transparent w-72 lg:w-64 sm:w-24 sm:translate-x-0" aria-label="Sidebar">
 
-    <div class="h-full py-4 pl-1 overflow-y-auto sm:pl-3">
+    <div class="h-full py-4 pl-1 overflow-y-auto sm:pl-3 no-scrollbar">
         <a href="#" class="flex pt-5 pb-5 ms-2 me-4 border-b border-gray-50/10 items-center ps-2.5">
             <img src="{{ asset('images/logo-brand.svg') }}" class="h-5 me-3 sm:h-6" alt="Flowbite Logo" />
             <span class="self-center block text-lg font-thin whitespace-nowrap dark:text-white md:hidden sm:hidden lg:block">Rubick</span>
@@ -33,13 +33,14 @@
                 </ul>
             </li>
             <li>
-                <button type="button" class="flex items-center w-full p-3 text-base text-white transition duration-75 rounded-l-full dropdown-button group hover:bg-gray-50/10" aria-controls="dropdown-example" data-tooltip-target="Data Ujian" data-tooltip-placement="right">
+                <button type="button" class="flex items-center w-full p-3 text-base transition duration-75 rounded-l-full dropdown-button group {{ App\Role\SidebarRole::isDataUjian() ? 'active-nav' : 'text-white hover:bg-gray-50/10' }}" aria-controls="dropdown-example" data-tooltip-target="Data Ujian" data-tooltip-placement="right">
                         <i class="text-xl ms-2 bi bi-ui-checks"></i>
                         <span class="flex-1 block text-left ms-3 rtl:text-right whitespace-nowrap md:hidden sm:hidden lg:block">Data Ujian</span>
                         <i class="block bi bi-chevron-down md:hidden sm:hidden lg:block"></i>
                 </button>
                 <x-tooltip title="Data Ujian"/>
                 <ul id="dropdown-data-ujian" class="hidden py-2 mx-2 space-y-2 transition-[height] duration-500 ease-in-out bg-blue-900 rounded-lg dropdown-bar">
+                    <x-dropdown-link :href="route('ujianjenis.index')" :active="request()->routeIs('ujianjenis.*')" title="Jenis"/>
                     <x-dropdown-link href="#" title="Sesi"/>
                     <x-dropdown-link href="#" title="Ruang"/>
                     <x-dropdown-link href="#" title="Atur Ruang & Sesi"/>

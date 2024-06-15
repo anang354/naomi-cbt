@@ -20,7 +20,7 @@
         {{-- col-span-2 my-4 --}}
         <div class="">
             {{-- <h3 class="pb-3 my-3 text-xs font-medium text-gray-600 border-b border-gray-200 xl:text-base">Tahun Ajaran</h3> --}}
-            <div class="relative overflow-x-auto">
+            <div class="relative overflow-x-auto no-scrollbar">
                 <x-table>
                   <x-table.thead>
                     <tr>

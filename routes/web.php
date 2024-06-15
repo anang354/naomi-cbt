@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+//MASTER DATA
+
 Route::get('/', function () {
     return view('dashboard', [
         'title' => 'Dashboard',
@@ -95,3 +97,15 @@ Route::get('/dataguru/editjabatan', function() {
         ]
     ]);
 })->name('dataguru.editJabatan');
+
+// DATA UJIAN
+
+Route::get('/ujianjenis', function() {
+    return view('admin.jenis.index', [
+        'title' => 'Jenis Ujian',
+        'breadcrumb' => [
+            ['text' => 'Data Ujian', 'url' => '#'],
+            ['text' => 'Jenis', 'url' => '#'],
+        ]
+    ]);
+})->name('ujianjenis.index');

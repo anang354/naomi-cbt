@@ -19,7 +19,7 @@
             </div>
         </form>
     </div>
-    <div class="relative overflow-x-auto">
+    <div class="relative overflow-x-auto no-scrollbar">
         <x-table>
           <x-table.thead>
             <tr class="">
