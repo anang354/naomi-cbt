@@ -8,6 +8,7 @@
     <title>Naomi CBT</title>
     @vite(['resources/css/app.css','resources/js/app.js'])
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    @yield('styles')
 </head>
 <body class="bg-gradient-to-b from-[#2046AE] via-[#2042A4] to-[#2147AF]">
     <x-button-sidebar/>
@@ -33,7 +34,6 @@
     $('.dropdown-button').click(function() {
         $(this).siblings('.dropdown-bar').slideToggle(300);
     });
-</script>
 </script>
 </body>
 </html>

@@ -113,23 +113,21 @@
             </h4>
             <div class="grid grid-cols-12 gap-2 mt-4">
                 <div class="col-span-12 mb-3 md:col-span-6 intro-x">
-                    <x-forms.label for="name">Nama Guru</x-forms.label>
-                    <x-forms.input name="name" value="Jennie Doe, S.Anim" id="name" type="text" />
+                    <x-forms.label for="nik">NIK</x-forms.label>
+                    <x-forms.input name="nik" id="nik" type="text" />
                 </div>
                 <div class="col-span-12 mb-3 md:col-span-6 intro-x">
-                    <x-forms.label for="nip">NIP/NUPTK</x-forms.label>
-                    <x-forms.input name="nip" value="21738921321" id="nip" type="text" />
+                    <x-forms.label for="tempatlahir">Tempat Lahir</x-forms.label>
+                    <x-forms.input name="tempatlahir" id="tempatlahir" type="text" />
                 </div>
                 <div class="col-span-12 mb-3 md:col-span-6 intro-x">
-                    <x-forms.label for="select">Jenis Kelamin</x-forms.label>
-                    <x-forms.select-v2 id="select" title="Select Gender">
-                        <x-forms.option-v2 id="laki-laki" value="laki-laki" name="gender">Laki-Laki</x-forms.option-v2>
-                        <x-forms.option-v2 id="perempuan" value="perempuan" name="gender">Perempuan</x-forms.option-v2>
-                    </x-forms.select-v2>
+                    <x-forms.label for="tanggal_lahir">Tanggal Lahir</x-forms.label>
+                    <x-forms.input name="date" id="tanggal_lahir" name="tanggal_lahir" type="date" />
+  
                 </div>
                 <div class="col-span-12 mb-3 md:col-span-6 intro-x">
-                    <x-forms.label for="telephone">No Telephone</x-forms.label>
-                      <x-forms.input name="telephone" value="081234983913" id="telephone" type="number"/>
+                    <x-forms.label for="alamat">Alamat</x-forms.label>
+                      <x-forms.input name="alamat" id="alamat" type="text"/>
                 </div>
             </div>
         </div>
@@ -140,6 +138,7 @@
 @section('scripts')
 
 <script>
+   
     $(document).ready(function() {
         $('#tab li').on('click', function(e) {
             e.preventDefault();
@@ -152,8 +151,6 @@
             $(`[data-content=${linkTab}]`).toggle();
         });
 
-
-
         $('#select').on('click', function() {
             $('#option').toggle();
         });
@@ -164,12 +161,6 @@
             $(this).find('input[type="radio"]').prop('checked', true);
             $('#option').hide();
         });
-    $('#check').on('click', function() {
-        var selectedCountry = $('input[name="country"]:checked').val();
-        console.log('Selected country:', selectedCountry);
-    });
-
-
     });
 
       </script>

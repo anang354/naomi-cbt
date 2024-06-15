@@ -55,7 +55,7 @@
             <div class="p-4 border-t border-gray-200/60">
                 <div class="flex items-center justify-between py-2">
                     <div>
-                        <x-button-primary class="py-1.5 px-2 text-xs xl:text-sm"><i class="bi bi-pencil-square me-1"></i>Jabatan</x-button-primary>
+                        <x-button-primary onclick="location.href='{{ route('dataguru.editJabatan') }}';"  class="py-1.5 px-2 text-xs xl:text-sm"><i class="bi bi-pencil-square me-1"></i>Jabatan</x-button-primary>
                         <x-button-secondary onclick="location.href='{{ route('dataguru.edit') }}';" class="py-1.5 px-2 text-xs xl:text-sm"><i class="bi bi-pencil-square me-1"></i>Profile</x-button-secondary>
                     </div>
                     <div>

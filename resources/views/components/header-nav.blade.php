@@ -1,6 +1,6 @@
 @props(['links'])
 <div class="flex items-center justify-between py-2.5 mx-6 mb-4 border-b border-gray-200">
-    <div id="breadcrumb" class="flex items-center gap-2 overflow-x-scroll max-w-30 sm:w-auto">
+    <div id="breadcrumb" class="flex items-center gap-2 overflow-x-auto no-scrollbar max-w-30 sm:w-auto">
         <a href="#" class="text-xs lg:text-sm text-sky-900">Application</a>
         @if (isset($links))
         @foreach ($links as $item)

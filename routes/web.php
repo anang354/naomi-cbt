@@ -85,3 +85,13 @@ Route::get('/dataguru/edit', function() {
         ]
     ]);
 })->name('dataguru.edit');
+Route::get('/dataguru/editjabatan', function() {
+    return view('admin.guru.edit_jabatan', [
+        'title' => 'Edit Jabatan Guru',
+        'breadcrumb' => [
+            ['text' => 'Master Data', 'url' => '#'],
+            ['text' => 'Guru', 'url' => route('dataguru.index')],
+            ['text' => 'Edit Jabatan', 'url' => '#'],
+        ]
+    ]);
+})->name('dataguru.editJabatan');
