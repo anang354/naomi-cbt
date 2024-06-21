@@ -1,20 +1,29 @@
 .select2-selection__choice {
     background-color: #20429e !important;
-    border-color: #1D3A8A !important;
+    border-color: #1d3a8a !important;
     color: #fff;
     padding: 0 10px;
+    border-radius: 0.5rem !important;
+    font-size: 11pt !important;
 }
 .select2-selection__choice__remove {
-    color: #FFF !important;
+    color: #fff !important;
     border-right: 0px !important;
 }
 .select2-selection__choice__remove:hover {
     background: transparent !important;
     color: #eee !important;
 }
-.select2-selection--single, .select2-selection__arrow {
-    height: 38px !important;
+.select2-selection--single,
+.select2-selection__arrow {
+    height: 42px !important;
+}
+.select2-selection.select2-selection--multiple {
+    background-color: rgb(249 250 251 /1) !important;
+    border-width: 1px !important;
+    border-color: rgb(209 213 219 /1) !important;
+    border-radius: 0.5rem !important;
 }
 .select2-selection--single > .select2-selection__rendered {
-    line-height: 35px !important;
+    line-height: 37px !important;
 }

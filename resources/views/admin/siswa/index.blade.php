@@ -313,65 +313,68 @@
         </div>
     </div>
 
-    <x-modal-form title="Tambah Mapel">
+    <x-modal-form title="Tambah Siswa" size="medium">
         <form action="">
             <x-modal-form.body>
                 <div class="mb-5">
-                    <x-forms.label>
-                        Nama Mapel
+                    <x-forms.label for="name">
+                        Nama Siswa
                     </x-forms.label>
-                    <x-forms.input name="name" type="text" placeholder="Mata Pelajaran" required />
+                    <x-forms.input name="name" type="text" placeholder="Nama Siswa" required />
+                </div>
+                <div class="mb-5">
+                    <x-forms.label for="nis">
+                        NIS
+                    </x-forms.label>
+                    <x-forms.input name="nis" type="number" placeholder="Nomor Induk Siswa" required />
                 </div>
                 <div class="mb-5">
                     <x-forms.label>
-                        Kode
+                        Jenis Kelamain
                     </x-forms.label>
-                    <x-forms.input name="kode" type="text" placeholder="Kode Mata Pelajaran" required />
-                </div>
-                <div class="mb-5">
-                    <x-forms.label>
-                        Status
-                    </x-forms.label>
-                    <x-forms.select name="isActive">
-                        <option value="active">Active</option>
-                        <option value="nonactive">Nonactive</option>
+                    <x-forms.select name="gender">
+                        <option value="active">Laki-laki</option>
+                        <option value="nonactive">Perempuan</option>
                     </x-forms.select>
-
-                    <div class="mb-5">
-                    </div>
-                    <x-forms.label>
-                        Jenjang
-                    </x-forms.label>
-                    <ul
-                        class="items-center w-full text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:flex ">
-                        <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
-                            <div class="flex items-center ps-3">
-                                <input id="vue-checkbox-list" type="checkbox" value=""
-                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2">
-                                <label for="vue-checkbox-list"
-                                    class="w-full py-3 text-sm font-medium text-gray-900 ms-2">SD</label>
-                            </div>
-                        </li>
-                        <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
-                            <div class="flex items-center ps-3">
-                                <input id="react-checkbox-list" type="checkbox" value=""
-                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2">
-                                <label for="react-checkbox-list"
-                                    class="w-full py-3 text-sm font-medium text-gray-900 ms-2 ">SMP</label>
-                            </div>
-                        </li>
-                        <li class="w-full border-b border-gray-200 sm:border-b-0 sm:border-r">
-                            <div class="flex items-center ps-3">
-                                <input id="angular-checkbox-list" type="checkbox" value=""
-                                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2">
-                                <label for="angular-checkbox-list"
-                                    class="w-full py-3 text-sm font-medium text-gray-900 ms-2 ">SMA</label>
-                            </div>
-                        </li>
-
-                    </ul>
                 </div>
-
+                <div class="mb-5">
+                    <x-forms.label for="kelas_awal">
+                        Kelas Awal
+                    </x-forms.label>
+                    <x-forms.select name="kelas">
+                        @for ($i = 1; $i < 13; $i++)
+                            <option value="{{ $i }}">{{ $i }}</option>
+                        @endfor
+                    </x-forms.select>
+                </div>
+                <div class="mb-5">
+                    <x-forms.label for="date_in">
+                        Tanggal Masuk
+                    </x-forms.label>
+                    <x-forms.input name="date_in" type="date" required />
+                </div>
+                <div class="mb-5">
+                    <x-forms.label for="username">
+                        Username
+                    </x-forms.label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 flex items-center text-gray-500 pointer-events-none start-0 ps-3">
+                            <i class="bi bi-person-fill"></i>
+                        </div>
+                        <input type="text" id="username" class="block w-full p-2.5 shadow-sm text-sm text-gray-900 border border-gray-300 rounded-lg ps-10 bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="Username" required />
+                    </div>
+                </div>
+                <div class="mb-5">
+                    <x-forms.label for="password">
+                        Password
+                    </x-forms.label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 flex items-center text-gray-500 pointer-events-none start-0 ps-3">
+                            <i class="bi bi-shield-lock-fill"></i>
+                        </div>
+                        <input type="password" id="password" class="block w-full p-2.5 shadow-sm text-sm text-gray-900 border border-gray-300 rounded-lg ps-10 bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="Password" required />
+                    </div>
+                </div>
             </x-modal-form.body>
         </form>
     </x-modal-form>

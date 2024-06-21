@@ -9,6 +9,6 @@ class SidebarRole
        return request()->routeIs(['datatahun.*', 'datamapel.*', 'datasiswa.*', 'datakelas.*', 'dataguru.*']);
     }
     public static function isDataUjian() {
-        return request()->routeIs(['ujianjenis.*']);
+        return request()->routeIs(['ujianjenis.*', 'ujiansesi.*', 'ujianruang.*', 'ujiansesisiswa.*', 'ujiannomorpeserta.*']);
     }
 }

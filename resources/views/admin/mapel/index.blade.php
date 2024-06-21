@@ -231,7 +231,7 @@
     </div>
 </div>
 
-<x-modal-form title="Tambah Mapel">
+<x-modal-form title="Tambah Mapel" size="medium">
     <form action="">
         <x-modal-form.body>
             <div class="mb-5">

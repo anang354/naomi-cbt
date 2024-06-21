@@ -24,7 +24,7 @@
                         <i class="block bi bi-chevron-down md:hidden sm:hidden lg:block"></i>
                 </button>
                 <x-tooltip title="Master Data"/>
-                <ul id="dropdown-data-ujian" class="hidden py-2 mx-2 space-y-2 transition-[height] duration-500 ease-in-out bg-blue-900 rounded-lg dropdown-bar">
+                <ul id="dropdown-data-ujian" class="{{ App\Role\SidebarRole::isMasterData() ? 'block' : 'hidden' }} py-2 mx-2 space-y-2 transition-[height] duration-500 ease-in-out bg-blue-900 rounded-lg dropdown-bar">
                     <x-dropdown-link :href="route('datatahun.index')" :active="request()->routeIs('datatahun.*')" title="Tahun Ajar" />
                     <x-dropdown-link :href="route('datamapel.index')" :active="request()->routeIs('datamapel.*')" title="Mata Pelajaran" />
                     <x-dropdown-link :href="route('datasiswa.index')" :active="request()->routeIs('datasiswa.*')" title="Siswa"/>
@@ -39,12 +39,12 @@
                         <i class="block bi bi-chevron-down md:hidden sm:hidden lg:block"></i>
                 </button>
                 <x-tooltip title="Data Ujian"/>
-                <ul id="dropdown-data-ujian" class="hidden py-2 mx-2 space-y-2 transition-[height] duration-500 ease-in-out bg-blue-900 rounded-lg dropdown-bar">
+                <ul id="dropdown-data-ujian" class="{{ App\Role\SidebarRole::isDataUjian() ? 'block' : 'hidden' }} py-2 mx-2 space-y-2 transition-[height] duration-500 ease-in-out bg-blue-900 rounded-lg dropdown-bar">
                     <x-dropdown-link :href="route('ujianjenis.index')" :active="request()->routeIs('ujianjenis.*')" title="Jenis"/>
-                    <x-dropdown-link href="#" title="Sesi"/>
-                    <x-dropdown-link href="#" title="Ruang"/>
-                    <x-dropdown-link href="#" title="Atur Ruang & Sesi"/>
-                    <x-dropdown-link href="#" title="Atur Nomor Peserta"/>
+                    <x-dropdown-link :href="route('ujiansesi.index')" :active="request()->routeIs('ujiansesi.*')" title="Sesi"/>
+                    <x-dropdown-link :href="route('ujianruang.index')" :active="request()->routeIs('ujianruang.*')" title="Ruang"/>
+                    <x-dropdown-link :href="route('ujiansesisiswa.index')" :active="request()->routeIs('ujiansesisiswa.*')" title="Atur Ruang & Sesi"/>
+                    <x-dropdown-link :href="route('ujiannomorpeserta.index')" :active="request()->routeIs('ujiannomorpeserta.*')" title="Atur Nomor Peserta"/>
                     <x-dropdown-link href="#" title="Bank Soal"/>
                     <x-dropdown-link href="#" title="Jadwal"/>
                     <x-dropdown-link href="#" title="Alokasi Waktu"/>

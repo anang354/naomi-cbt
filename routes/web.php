@@ -109,3 +109,39 @@ Route::get('/ujianjenis', function() {
         ]
     ]);
 })->name('ujianjenis.index');
+Route::get('/ujiansesi', function() {
+    return view('admin.sesi.index', [
+        'title' => 'Sesi Ujian',
+        'breadcrumb' => [
+            ['text' => 'Data Ujian', 'url' => '#'],
+            ['text' => 'Sesi', 'url' => '#'],
+        ]
+    ]);
+})->name('ujiansesi.index');
+Route::get('/ujianruang', function() {
+    return view('admin.ruang.index', [
+        'title' => 'Ruang Ujian',
+        'breadcrumb' => [
+            ['text' => 'Data Ujian', 'url' => '#'],
+            ['text' => 'Ruang', 'url' => '#'],
+        ]
+    ]);
+})->name('ujianruang.index');
+Route::get('/ujiansesisiswa', function() {
+    return view('admin.ruang-sesi.index', [
+        'title' => 'Atur Ruang & Sesi',
+        'breadcrumb' => [
+            ['text' => 'Data Ujian', 'url' => '#'],
+            ['text' => 'Ruang & Sesi', 'url' => '#'],
+        ]
+    ]);
+})->name('ujiansesisiswa.index');
+Route::get('/ujiannomorpeserta', function() {
+    return view('admin.nomor-peserta.index', [
+        'title' => 'Atur Nomor Peserta',
+        'breadcrumb' => [
+            ['text' => 'Data Ujian', 'url' => '#'],
+            ['text' => 'Nomor Peserta', 'url' => '#'],
+        ]
+    ]);
+})->name('ujiannomorpeserta.index');
