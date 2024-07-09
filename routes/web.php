@@ -145,3 +145,54 @@ Route::get('/ujiannomorpeserta', function() {
         ]
     ]);
 })->name('ujiannomorpeserta.index');
+Route::get('/ujianbanksoal', function() {
+    return view('admin.bank-soal.index', [
+        'title' => 'Bank Soal',
+        'breadcrumb' => [
+            ['text' => 'Data Ujian', 'url' => '#'],
+            ['text' => 'Bank Soal', 'url' => '#'],
+        ]
+    ]);
+})->name('ujianbanksoal.index');
+Route::get('/ujianbanksoal/create', function() {
+    return view('admin.bank-soal.create', [
+        'title' => 'Create Bank Soal',
+        'breadcrumb' => [
+            ['text' => 'Data Ujian', 'url' => '#'],
+            ['text' => 'Bank Soal', 'url' => route('ujianbanksoal.index')],
+            ['text' => 'Create', 'url' => '#'],
+        ]
+    ]);
+})->name('ujianbanksoal.create');
+Route::get('/ujianbanksoal/detail', function() {
+    return view('admin.bank-soal.detail', [
+        'title' => 'Detail Bank Soal',
+        'breadcrumb' => [
+            ['text' => 'Data Ujian', 'url' => '#'],
+            ['text' => 'Bank Soal', 'url' => route('ujianbanksoal.index')],
+            ['text' => 'Detail', 'url' => '#'],
+        ]
+    ]);
+})->name('ujianbanksoal.detail');
+Route::get('/ujianbanksoal/create-soal', function() {
+    return view('admin.bank-soal.create-soal', [
+        'title' => 'Create Soal',
+        'breadcrumb' => [
+            ['text' => 'Data Ujian', 'url' => '#'],
+            ['text' => 'Bank Soal', 'url' => route('ujianbanksoal.index')],
+            ['text' => 'STSIPAS01', 'url' => route('ujianbanksoal.detail')],
+            ['text' => 'Create', 'url' => ''],
+        ]
+    ]);
+})->name('ujianbanksoal.create-soal');
+Route::get('/ujianbanksoal/example', function() {
+    return view('admin.bank-soal.mjd-example', [
+        'title' => 'Create Soal',
+        'breadcrumb' => [
+            ['text' => 'Data Ujian', 'url' => '#'],
+            ['text' => 'Bank Soal', 'url' => route('ujianbanksoal.index')],
+            ['text' => 'STSIPAS01', 'url' => route('ujianbanksoal.detail')],
+            ['text' => 'Create', 'url' => ''],
+        ]
+    ]);
+})->name('ujianbanksoal.example');

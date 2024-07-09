@@ -45,7 +45,7 @@
                     <x-dropdown-link :href="route('ujianruang.index')" :active="request()->routeIs('ujianruang.*')" title="Ruang"/>
                     <x-dropdown-link :href="route('ujiansesisiswa.index')" :active="request()->routeIs('ujiansesisiswa.*')" title="Atur Ruang & Sesi"/>
                     <x-dropdown-link :href="route('ujiannomorpeserta.index')" :active="request()->routeIs('ujiannomorpeserta.*')" title="Atur Nomor Peserta"/>
-                    <x-dropdown-link href="#" title="Bank Soal"/>
+                    <x-dropdown-link :href="route('ujianbanksoal.index')" :active="request()->routeIs('ujianbanksoal.*')" title="Bank Soal"/>
                     <x-dropdown-link href="#" title="Jadwal"/>
                     <x-dropdown-link href="#" title="Alokasi Waktu"/>
                     <x-dropdown-link href="#" title="Pengawas"/>
