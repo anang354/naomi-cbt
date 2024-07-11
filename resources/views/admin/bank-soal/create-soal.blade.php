@@ -263,11 +263,13 @@
                         </div>
                     </div>
 
-                    <div id="container">
+                    <div id="jd-table">
 
                         <div class="bonds" id="original" style="display:block;">
                       
                         </div>
+
+                        <div class="tables-jd" id="table-ori" style="display: none;"></div>
                   
                         {{-- <hr/>
                         <button type="button" class="btn fieldLinkerSave btn-sm btn-primary">Save links</button>

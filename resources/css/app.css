@@ -107,6 +107,13 @@
         height: 100%;
     }
 
+    /* .del-col, .del-row {
+        background: red;
+        padding: 0 8px;
+        color: white;
+        border-radius: 50%;
+    } */
+
     .intro-x {
         z-index: 5;
         opacity: 0;

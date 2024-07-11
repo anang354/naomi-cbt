@@ -5,7 +5,7 @@
                 : 'text-white'
 @endphp
 <li class="intro-x">
-    <div data-tooltip-target="{{ $title }}" data-tooltip-placement="right">
+    <div data-tooltip-target="{{ $title }}" data-tooltip-placement="top">
         <a href="{{ $href }}" class="flex items-center w-full p-2 pl-6 text-sm {{ $classes }} duration-700 transition-translate xl:text-base group hover:bg-gray-50/10">
             <i class="bi bi-activity"></i>
             <span class="block ms-4 md:hidden sm:hidden lg:block">{{ $title }}</span>
